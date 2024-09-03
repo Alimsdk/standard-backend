@@ -31,4 +31,13 @@ app.use(express.static("public")); // any file uploaded by user
 
 app.use(cookieParser()); // to set or read cookies on users browser
 
+//routes import
+
+import userRoute from "./routes/user.routes.js";
+
+//routes declaration
+
+app.use("/api/v1/users", userRoute);
+// http://localhost:8000/api/v1/users/register
+
 export { app };
